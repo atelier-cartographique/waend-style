@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+//********************  INPUTS  ***********************//
+
+input {
+    padding: @margin / 2;
+    border: 1px solid @grey-medium;
+}
+
+
+//********************  BUTTONS  ***********************//
+
+button {
+    font-family: monospace;
+    color: @blue;
+    background-color: #ffffff;
+    border: 1px solid @grey-medium;
+    min-width: 2em;
+    padding: @margin / 2 @margin;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: @grey-medium;
+
+    &.add {
+        background-color: @green-light;
+        border-color: @green-light;
+    }
+}
