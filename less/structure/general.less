@@ -14,11 +14,10 @@ input {
 //********************  BUTTONS  ***********************//
 
 button {
-    font-family: monospace;
     color: @blue;
     background-color: #ffffff;
     border: 1px solid @grey-medium;
-    min-width: 2em;
+    min-width: 3em;
     padding: @margin / 2 @margin;
     text-align: center;
     text-decoration: none;
@@ -26,6 +25,8 @@ button {
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
+
+    a {text-decoration: none;}
 }
 
 button:hover {
