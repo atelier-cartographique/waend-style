@@ -3,37 +3,81 @@ body {
     font-size: 0.8em;
 }
 
-//********************  INPUTS  ***********************//
+label {
+    font-weight: bold;
+}
+
+//********************  INPUTS, TEXT AREAS & FOCUS ***********************//
 
 input {
     padding: @margin / 2;
     border: 1px solid @grey-medium;
+    border-radius: 2px;
+}
+
+input:focus {
+    border-color: @green;
+}
+
+:focus {
+    outline: 0;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline-offset: 0px;
+}
+
+:focus {
+    outline: 0;
+}
+
+
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:@grey-light;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:@grey-light;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:@grey-light;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:@grey-light;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:@grey-light;
 }
 
 
 //********************  BUTTONS  ***********************//
 
 button {
-    color: @blue;
-    background-color: #ffffff;
-    border: 1px solid @grey-medium;
+    color: @white;
+    background-color: @green;
+    border: 0px;
     min-width: 3em;
     padding: @margin / 2 @margin;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    border-radius: 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
-    a {text-decoration: none;}
-}
-
-button:hover {
-    background-color: @grey-medium;
 
     &.add {
         background-color: @green-light;
         border-color: @green-light;
     }
+
+    a {text-decoration: none;}
+}
+
+button:hover {
+    background-color: @green - 15%;
+
 }
