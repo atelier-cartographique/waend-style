@@ -1,9 +1,30 @@
 .dashboard {
-    .user {}
-    .maps {
-        button.add {
-            margin-left: -@margin;
+    .user {
+        padding-bottom: @margin * 2 ;
+        border-bottom: 1px solid @grey-dark;
+
+        .attributes {
+            margin-bottom: @margin;
+        }
+        input {
+            margin-right: @sm-margin;
             margin-bottom: @sm-margin;
+        }
+    }
+
+
+    .maps {
+        .add-map {
+            margin-bottom: @margin;
+
+
+            &:before {
+                content: "+";
+                width: 1em;
+                color: @blue;
+                display: inline-block;
+                text-align: center;
+            }
         }
     }
 }

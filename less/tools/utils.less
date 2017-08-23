@@ -23,6 +23,15 @@ html {box-sizing: border-box; }
     left: @left;
 }
 
+.btn-color(@btn-txt-color, @btn-border-color, @btn-back-color) {
+    color: @btn-txt-color;
+    border: 1px solid @btn-border-color;
+    background-color: @btn-back-color;
+    &:hover {
+        border-color: @btn-border-color - 15%;
+        background-color: @btn-back-color - 15%;
+    }
+}
 
 
 /******** MEDIA QUERIES ********/

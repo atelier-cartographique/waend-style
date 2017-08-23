@@ -1,18 +1,29 @@
 body {
     font-family: sans-serif;
     font-size: 0.8em;
+    padding: @margin;
 }
 
 label {
     font-weight: bold;
 }
 
+li {
+    list-style-type: none;
+    &:before {
+        content: "•";
+        width: 1em;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+
 //********************  INPUTS, TEXT AREAS & FOCUS ***********************//
 
 input {
     padding: @margin / 2;
-    border: 1px solid @grey-medium;
-    border-radius: 2px;
+    border: 1px solid @grey-light;
 }
 
 input:focus {
@@ -56,28 +67,18 @@ input:focus, textarea:focus, select:focus {
 //********************  BUTTONS  ***********************//
 
 button {
-    color: @white;
-    background-color: @green;
-    border: 0px;
     min-width: 3em;
     padding: @margin / 2 @margin;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 2px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     cursor: pointer;
-
-    &.add {
-        background-color: @green-light;
-        border-color: @green-light;
-    }
-
-    a {text-decoration: none;}
 }
 
-button:hover {
-    background-color: @green - 15%;
+button {
+    .btn-color(@white, @green, @green);
 
+    &.remove {.btn-color(red, @white, @white);}
 }
