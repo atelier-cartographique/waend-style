@@ -1,6 +1,8 @@
+
+
 body {
     font-family: sans-serif;
-    font-size: 0.8em;
+    font-size: 14px;
     padding: @margin;
 }
 
@@ -19,7 +21,7 @@ li {
 
     &:before {
         content: "•";
-        width: 1em;
+        width: 1rem;
         display: inline-block;
         text-align: center;
     }
@@ -77,7 +79,8 @@ input:focus, textarea:focus, select:focus {
 //********************  BUTTONS  ***********************//
 
 button {
-    min-width: 3em;
+    font-family: monospace;
+    min-width: 3rem;
     padding: @margin / 2 @margin;
     text-align: center;
     text-decoration: none;
@@ -88,7 +91,7 @@ button {
 }
 
 button {
-    .btn-color(@white, @green, @green);
+    .btn-color(@green, @green, @white);
 
-    &.remove {.btn-color(red, @white, @white);}
+    &.remove {.btn-color(red, red, @white);}
 }
