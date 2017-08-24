@@ -15,7 +15,7 @@
 
     .maps {
         .add-map {
-            margin-bottom: @margin;
+            margin: @margin 0;
 
 
             &:before {
@@ -25,6 +25,15 @@
                 display: inline-block;
                 text-align: center;
             }
+        }
+
+        li:before {
+            content: "";
+        }
+
+        .edit-map,
+        .view-map {
+            margin-right: @sm-margin;
         }
     }
 }
